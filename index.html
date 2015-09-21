@@ -6,15 +6,35 @@
 </head>
 
 <body>
-	<p class="text" id="p1">The green piece of paper was still there on the call box, partly obscuring the name Ekman. One corner of the paper curled outward in the heat. With her fingernail, she started to peel the tape off so that she could reposition it over the paper, but she stopped herself. The stairwell was dark. Someone on the ground floor was playing music very loudly.<br/><br/><a href="#" class="myButton">Change</a></p>
-	<p class="text" id="p2">She got out of bed and wrapped herself in her robe. It was the first time she could remember hating her husband. Over the years that had become such a familiar, even comforting feeling. It was cold out and she crossed the courtyard as quickly as she could, taking care to avoid an icy patch. She could remember so much about that evening, but not what the problem with the younger boy had been. She couldn't recall Johanna's coming home.<br/><br/><a href="#" class="myButton">Change</a></p>	
-	<p class="text" id="p3">She fixed herself something to eat and opened the second bottle of wine. She watched the news while she ate. Dusk settled over the courtyard, and by eight it was dark.She turned the television off and took a thin blanket from the couch and returned to the balcony. She wrapped the blanket around her shoulders. Outside the apartment, she could smell her own inside life sharply on the blanket.<br/><br/><a href="#" class="myButton">Change</a></p>
-	<p class="text" id="p4">The heavy front door of the building creaked open. The Light in the hall came on. It spilled out into the courtyard, revealing a chair and the sharp contrasts of shadowed corners. The door slammed shut. She listened to footsteps in the stairwell. Her wineglass was empty and she got up to fill it.<br/><br/><a href="#" class="myButton">Change</a></p>
-	<p class="text" id="p5">Louse didn't believe in fate. Every morning she woke up with the thought that that day would be the one when something terrible was destined to happen. She did this because she knew it was impossible to predict what was coming for each of us. Whatever she believed would happen that day she knew would not, owing to our inability to know the future. Lately she'd been imagining horrific things.<br/><br/><a href="#" class="myButton">Change</a></p>
+	<p class="text" id="p1">The green piece of paper was still there on the call box, partly obscuring the name Ekman. One corner of the paper curled outward in the heat. With her fingernail, she started to peel the tape off so that she could reposition it over the paper, but she stopped herself. The stairwell was dark. Someone on the ground floor was playing music very loudly.<br/><br/><a href="#" class="myButton" onclick="changeTextP1()">Change</a></p>
+	<p class="text" id="p2">She got out of bed and wrapped herself in her robe. It was the first time she could remember hating her husband. Over the years that had become such a familiar, even comforting feeling. It was cold out and she crossed the courtyard as quickly as she could, taking care to avoid an icy patch. She could remember so much about that evening, but not what the problem with the younger boy had been. She couldn't recall Johanna's coming home.<br/><br/><a href="#" class="myButton" onclick="changeTextP2()">Change</a></p>	
+	<p class="text" id="p3">She fixed herself something to eat and opened the second bottle of wine. She watched the news while she ate. Dusk settled over the courtyard, and by eight it was dark.She turned the television off and took a thin blanket from the couch and returned to the balcony. She wrapped the blanket around her shoulders. Outside the apartment, she could smell her own inside life sharply on the blanket.<br/><br/><a href="#" class="myButton" onclick="changeTextP3()">Change</a></p>
+	<p class="text" id="p4">The heavy front door of the building creaked open. The Light in the hall came on. It spilled out into the courtyard, revealing a chair and the sharp contrasts of shadowed corners. The door slammed shut. She listened to footsteps in the stairwell. Her wineglass was empty and she got up to fill it.<br/><br/><a href="#" class="myButton" onclick="changeTextP4()">Change</a></p>
+	<p class="text" id="p5">Louse didn't believe in fate. Every morning she woke up with the thought that that day would be the one when something terrible was destined to happen. She did this because she knew it was impossible to predict what was coming for each of us. Whatever she believed would happen that day she knew would not, owing to our inability to know the future. Lately she'd been imagining horrific things.<br/><br/><a href="#" class="myButton" onclick="changeTextP5()">Change</a></p>
 	
 	<hr>
 	
 	<p class="text" id="instructions">INSTRUCTIONS<br/>1.  Choose a paragraph<br/>2.  Pick the first four noun phrases in that paragraph (ie. "green piece of paper")<br/>3.  Find the end of the sentence of the last noun-phrase<br/>4.  Skip two full sentences<br/>5.  Add the next full sentence to the end of your text<br/><br/>Example result:<br/> "The green piece of paper, the call box, one corner of the paper, the heat. Someone on the ground floor was playing music very loudly."<br/><br/></p>
 
-	<script></script>
+	<script type="text/javascript">
+		function changeTextP1() {
+			document.getElementById("p1").innerHTML = "The green piece of paper, the call box, one corner, the paper. Someone on the ground floor was playing music very loudly.";
+		} 
+		
+		function changeTextP2() {
+			document.getElementById("p2").innerHTML = "Bed, her robe, first time, her husband. She could remember so much about that evening, but not what the problem with the younger boy had been.";
+		}
+		
+		function changeTextP3() {
+			document.getElementById("p3").innerHTML = "";
+		}
+		
+		function changeTextP4() {
+			document.getElementById("p4").innerHTML = "";
+		}
+		
+		function changeTextP5() {
+			document.getElementById("p5").innerHTML = "";
+		}
+	</script>
 </body>
