@@ -31,13 +31,18 @@ function setup() {
 
 		
 function highlight() {
-	p1 = select('#p1');
-	p1.style("background", "#ff0000");
+	var highlight = selectAll('.highlight');
+	// console.log(highlight);
+	for (var i=0; i<highlight.length; i++) {
+		highlight[i].style("background", "#ff0000");
+	}
 }
 
 function removeHighlight() {	
-	p1 = select('#p1');
-	p1.style("background", "none");
+	var highlight = selectAll('.highlight');
+	for (var i=0; i<highlight.length; i++) {
+		highlight[i].style("background", "none");
+	}
 }
 
 	
