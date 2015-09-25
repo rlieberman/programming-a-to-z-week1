@@ -3,6 +3,8 @@
     <title>Programming A to Z: Week 1</title>
     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<script language="javascript" type="text/javascript" src="//cdn.jsdelivr.net/p5.js/0.3.11/p5.min.js"></script>
+  	<script language="javascript" type="text/javascript" src="//cdn.jsdelivr.net/p5.js/0.3.11/addons/p5.dom.js"></script>
 </head>
 
 <body>
@@ -19,8 +21,30 @@
 	<p class="text" id="instructions">INSTRUCTIONS<br/>1.  Choose a paragraph<br/>2.  Pick the first four noun phrases in that paragraph (exclude proper nouns) - ie. "green piece of paper"<br/>3.  Find the end of the sentence of the last noun-phrase<br/>4.  Skip two full sentences<br/>5.  Add the next full sentence to the end of your text<br/><br/>Example result:<br/> "The green piece of paper, the call box, one corner of the paper, the heat. Someone on the ground floor was playing music very loudly."<br/><br/></p>
 
 	<script type="text/javascript">
+	
+// 		var texts = ['one', 'this is something else', 'adfsadfsadf'];
+// 		
+// 		var pars = selectAll('p');
+// 		for (var i = 0; i < pars.length; i++) {
+// 		  pars[i].mousePressed(changeIt);
+// 		}
+// 		
+// 		function changeIt() {
+// 		  var r = floor(random(pars.length));
+// 		  this.html(text[r]);
+// 		}
+// 	
+// 	
+// 	
 		function changeTextP1() {
 			document.getElementById("p1").innerHTML = "The green piece of paper, the call box, one corner, the paper. Someone on the ground floor was playing music very loudly.";
+		
+	// 		select('#p1').html('this is the new text');
+			
+			//var p1 = select('#p1');
+			//p1.html('this is the new text');
+			
+			
 		} 
 		
 		function changeTextP2() {
