@@ -6,7 +6,8 @@ function setup() {
 	
 	//step 1: when you hover over the paragraph, highlight the words
 	p1 = select('#p1');
-	p1.mouseOver(highlightP1);
+	p1.mouseOver(highlight);
+	p1.mouseOut(removeHighlight);
 	
 	
 	//step 2: when you click the button, change the text -- do this for all paragraphs
@@ -24,21 +25,25 @@ function setup() {
 	
 	var bttn5 = select('#bttn5');
 	bttn5.mousePressed(changeTextP5);
-	
-	
 
 }
 
 
 		
-function highlightP1() {
+function highlight() {
+	p1 = select('#p1');
 	p1.style("background", "#ff0000");
+}
+
+function removeHighlight() {	
+	p1 = select('#p1');
+	p1.style("background", "none");
 }
 
 	
 function changeTextP1() {
 	p1 = select('#p1');
-	p1.html('this is the new text');
+	p1.html('The green piece of paper, the call box, one corner of the paper, the heat. Someone on the ground floor was playing music very loudly.');
 }			
 
 function changeTextP2() {
