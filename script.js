@@ -44,6 +44,7 @@ function removeHighlight() {
 function changeTextP1() {
 	p1 = select('#p1');
 	p1.html('The green piece of paper, the call box, one corner of the paper, the heat. Someone on the ground floor was playing music very loudly.');
+
 }			
 
 function changeTextP2() {
