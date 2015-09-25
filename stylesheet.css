@@ -31,9 +31,11 @@ body {
 
 
 
-
-
-.myButton {
+#bttn1, 
+#bttn2, 
+#bttn3, 
+#bttn4, 
+#bttn5 {
 	background-color:#000000;
 	display:inline-block;
 	cursor:pointer;
@@ -44,10 +46,22 @@ body {
 	padding:14px 31px;
 	text-decoration:none;
 }
-.myButton:hover {
+
+
+#bttn1:hover, 
+#bttn2:hover, 
+#bttn3:hover, 
+#bttn4:hover, 
+#bttn5:hover {
 	background-color:#5c5c5c;
 }
-.myButton:active {
+
+
+#bttn1:active, 
+#bttn2:active, 
+#bttn3:active, 
+#bttn4:active, 
+#bttn5:active {
 	position:relative;
 	top:1px;
 }

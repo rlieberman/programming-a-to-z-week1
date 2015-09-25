@@ -3,16 +3,19 @@
     <title>Programming A to Z: Week 1</title>
     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-	<script language="javascript" type="text/javascript" src="//cdn.jsdelivr.net/p5.js/0.3.11/p5.min.js"></script>
-  	<script language="javascript" type="text/javascript" src="//cdn.jsdelivr.net/p5.js/0.3.11/addons/p5.dom.js"></script>
+	
+	<script src="script.js" type="text/javascript"></script>
+	<script src="libraries/p5.js" type="text/javascript"></script>
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5.sound.js" type="text/javascript"></script>
 </head>
 
 <body>
-	<p class="text" id="p1">The green piece of paper was still there on the call box, partly obscuring the name Ekman. One corner of the paper curled outward in the heat. With her fingernail, she started to peel the tape off so that she could reposition it over the paper, but she stopped herself. The stairwell was dark. Someone on the ground floor was playing music very loudly.<br/><br/><a href="#" class="myButton" onclick="changeTextP1()">Change</a></p>
-	<p class="text" id="p2">She got out of bed and wrapped herself in her robe. It was the first time she could remember hating her husband. Over the years that had become such a familiar, even comforting feeling. It was cold out and she crossed the courtyard as quickly as she could, taking care to avoid an icy patch. She could remember so much about that evening, but not what the problem with the younger boy had been. She couldn't recall Johanna's coming home.<br/><br/><a href="#" class="myButton" onclick="changeTextP2()">Change</a></p>	
-	<p class="text" id="p3">She fixed herself something to eat and opened the second bottle of wine. She watched the news while she ate. Dusk settled over the courtyard, and by eight it was dark.She turned the television off and took a thin blanket from the couch and returned to the balcony. She wrapped the blanket around her shoulders. Outside the apartment, she could smell her own inside life sharply on the blanket.<br/><br/><a href="#" class="myButton" onclick="changeTextP3()">Change</a></p>
-	<p class="text" id="p4">The heavy front door of the building creaked open. The Light in the hall came on. It spilled out into the courtyard, revealing a chair and the sharp contrasts of shadowed corners. The door slammed shut. She listened to footsteps in the stairwell. Her wineglass was empty and she got up to fill it.<br/><br/><a href="#" class="myButton" onclick="changeTextP4()">Change</a></p>
-	<p class="text" id="p5">Louise didn't believe in fate. Every morning she woke up with the thought that that day would be the one when something terrible was destined to happen. She did this because she knew it was impossible to predict what was coming for each of us. Whatever she believed would happen that day she knew would not, owing to our inability to know the future. Lately she'd been imagining horrific things.<br/><br/><a href="#" class="myButton" onclick="changeTextP5()">Change</a></p>
+	<p class="text" id="p1">The green piece of paper was still there on the call box, partly obscuring the name Ekman. One corner of the paper curled outward in the heat. With her fingernail, she started to peel the tape off so that she could reposition it over the paper, but she stopped herself. The stairwell was dark. Someone on the ground floor was playing music very loudly.<br/><br/><a href="#" id="bttn1">Change</a></p>
+	<p class="text" id="p2">She got out of bed and wrapped herself in her robe. It was the first time she could remember hating her husband. Over the years that had become such a familiar, even comforting feeling. It was cold out and she crossed the courtyard as quickly as she could, taking care to avoid an icy patch. She could remember so much about that evening, but not what the problem with the younger boy had been. She couldn't recall Johanna's coming home.<br/><br/><a href="#" id="bttn2">Change</a></p>	
+	<p class="text" id="p3">She fixed herself something to eat and opened the second bottle of wine. She watched the news while she ate. Dusk settled over the courtyard, and by eight it was dark.She turned the television off and took a thin blanket from the couch and returned to the balcony. She wrapped the blanket around her shoulders. Outside the apartment, she could smell her own inside life sharply on the blanket.<br/><br/><a href="#" id="bttn3">Change</a></p>
+	<p class="text" id="p4">The heavy front door of the building creaked open. The Light in the hall came on. It spilled out into the courtyard, revealing a chair and the sharp contrasts of shadowed corners. The door slammed shut. She listened to footsteps in the stairwell. Her wineglass was empty and she got up to fill it.<br/><br/><a href="#" id="bttn4">Change</a></p>
+	<p class="text" id="p5">Louise didn't believe in fate. Every morning she woke up with the thought that that day would be the one when something terrible was destined to happen. She did this because she knew it was impossible to predict what was coming for each of us. Whatever she believed would happen that day she knew would not, owing to our inability to know the future. Lately she'd been imagining horrific things.<br/><br/><a href="#" id="bttn5">Change</a></p>
 	
 	<p class="text" id="credit">Source text taken from "The Apartment" by Jensen Beach. Appears in The New Yorker from August 31, 2015.</p>
 	
@@ -20,47 +23,4 @@
 	
 	<p class="text" id="instructions">INSTRUCTIONS<br/>1.  Choose a paragraph<br/>2.  Pick the first four noun phrases in that paragraph (exclude proper nouns) - ie. "green piece of paper"<br/>3.  Find the end of the sentence of the last noun-phrase<br/>4.  Skip two full sentences<br/>5.  Add the next full sentence to the end of your text<br/><br/>Example result:<br/> "The green piece of paper, the call box, one corner of the paper, the heat. Someone on the ground floor was playing music very loudly."<br/><br/></p>
 
-	<script type="text/javascript">
-	
-// 		var texts = ['one', 'this is something else', 'adfsadfsadf'];
-// 		
-// 		var pars = selectAll('p');
-// 		for (var i = 0; i < pars.length; i++) {
-// 		  pars[i].mousePressed(changeIt);
-// 		}
-// 		
-// 		function changeIt() {
-// 		  var r = floor(random(pars.length));
-// 		  this.html(text[r]);
-// 		}
-// 	
-// 	
-// 	
-		function changeTextP1() {
-			document.getElementById("p1").innerHTML = "The green piece of paper, the call box, one corner, the paper. Someone on the ground floor was playing music very loudly.";
-		
-	// 		select('#p1').html('this is the new text');
-			
-			//var p1 = select('#p1');
-			//p1.html('this is the new text');
-			
-			
-		} 
-		
-		function changeTextP2() {
-			document.getElementById("p2").innerHTML = "Bed, her robe, first time, her husband. She could remember so much about that evening, but not what the problem with the younger boy had been.";
-		}
-		
-		function changeTextP3() {
-			document.getElementById("p3").innerHTML = "Something to eat, second bottle of wine, the news, dusk. Outside the apartment, she could smell her own inside life sharply on the blanket.";
-		}
-		
-		function changeTextP4() {
-			document.getElementById("p4").innerHTML = "The heavy front door, the building, the light in the hall, the courtyard. Her wineglass was empty and she got up to fill it.";
-		}
-		
-		function changeTextP5() {
-			document.getElementById("p5").innerHTML = "Fate, every morning, the thought, that day. Lately she'd been imagining horrific things.";
-		}
-	</script>
 </body>
