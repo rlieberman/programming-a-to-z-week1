@@ -4,11 +4,15 @@ function setup() {
 
 	noCanvas();
 	
-	//step 1: when you hover over the paragraph, highlight the words
+	//step 1: when you hover over each paragraph, highlight the words in that paragraph
 	p1 = select('#p1');
-	p1.mouseOver(highlight);
-	p1.mouseOut(removeHighlight);
+	p1.mouseOver(highlightP1);
+	p1.mouseOut(removeHighlightP1);
 	
+	p2 = select('#p2');
+	p2.mouseOver(highlightP2);
+	p2.mouseOut(removeHighlightP2);
+
 	
 	//step 2: when you click the button, change the text -- do this for all paragraphs
 	var bttn1 = select('#bttn1');		//grab button 1, assign it to a variable
@@ -30,16 +34,31 @@ function setup() {
 
 
 		
-function highlight() {
-	var highlight = selectAll('.highlight');
+function highlightP1() {
+	var highlight = selectAll('.highlightP1');
 	// console.log(highlight);
 	for (var i=0; i<highlight.length; i++) {
-		highlight[i].style("background", "#ff0000");
+		highlight[i].style("background", "#d9d9d9");
 	}
 }
 
-function removeHighlight() {	
-	var highlight = selectAll('.highlight');
+function removeHighlightP1() {	
+	var highlight = selectAll('.highlightP1');
+	for (var i=0; i<highlight.length; i++) {
+		highlight[i].style("background", "none");
+	}
+}
+
+function highlightP2() {
+	var highlight = selectAll('.highlightP2');
+	// console.log(highlight);
+	for (var i=0; i<highlight.length; i++) {
+		highlight[i].style("background", "#d9d9d9");
+	}
+}
+
+function removeHighlightP2() {	
+	var highlight = selectAll('.highlightP2');
 	for (var i=0; i<highlight.length; i++) {
 		highlight[i].style("background", "none");
 	}
