@@ -33,35 +33,32 @@ function setup() {
 
 
 		
-function highlightP1() {
-	var highlight = selectAll('.highlightP1');
-	// console.log(highlight);
-	for (var i=0; i<highlight.length; i++) {
-		highlight[i].style("background", "#d9d9d9");
-	}
+function highlightP() {
+	alert("Paragraph has been highlighted!");
+
 }
 
-function removeHighlightP1() {	
-	var highlight = selectAll('.highlightP1');
-	for (var i=0; i<highlight.length; i++) {
-		highlight[i].style("background", "none");
-	}
-}
-
-function highlightP2() {
-	var highlight = selectAll('.highlightP2');
-	// console.log(highlight);
-	for (var i=0; i<highlight.length; i++) {
-		highlight[i].style("background", "#d9d9d9");
-	}
-}
-
-function removeHighlightP2() {	
-	var highlight = selectAll('.highlightP2');
-	for (var i=0; i<highlight.length; i++) {
-		highlight[i].style("background", "none");
-	}
-}
+// function removeHighlightP1() {	
+// 	var highlight = selectAll('.highlightP1');
+// 	for (var i=0; i<highlight.length; i++) {
+// 		highlight[i].style("background", "none");
+// 	}
+// }
+// 
+// function highlightP2() {
+// 	var highlight = selectAll('.highlightP2');
+// 	// console.log(highlight);
+// 	for (var i=0; i<highlight.length; i++) {
+// 		highlight[i].style("background", "#d9d9d9");
+// 	}
+// }
+// 
+// function removeHighlightP2() {	
+// 	var highlight = selectAll('.highlightP2');
+// 	for (var i=0; i<highlight.length; i++) {
+// 		highlight[i].style("background", "none");
+// 	}
+// }
 
 	
 function changeTextP1() {
