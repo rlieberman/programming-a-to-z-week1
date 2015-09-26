@@ -7,7 +7,7 @@ function setup() {
 	//step 1: when you hover over a paragraph, highlight the words in that paragraph
 	paragraphs = selectAll('p'); 
 	
-	for (var i=0; i<paragraphs.length; i++ {	//when you hover over each paragraph, call highlightP
+	for (var i=0; i<paragraphs.length; i++) {	//when you hover over each paragraph, call highlightP
 		paragraphs[i].mouseOver(highlightP);
 	}
 	
