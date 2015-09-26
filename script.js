@@ -1,17 +1,16 @@
-var p1;
+var paragraphs;
 
 function setup() {
 
 	noCanvas();
 	
-	//step 1: when you hover over each paragraph, highlight the words in that paragraph
-	p1 = select('#p1');
-	p1.mouseOver(highlightP1);
-	p1.mouseOut(removeHighlightP1);
+	//step 1: when you hover over a paragraph, highlight the words in that paragraph
+	paragraphs = selectAll('p'); 
 	
-	p2 = select('#p2');
-	p2.mouseOver(highlightP2);
-	p2.mouseOut(removeHighlightP2);
+	for (var i=0; i<paragraphs.length; i++ {	//when you hover over each paragraph, call highlightP
+		paragraphs[i].mouseOver(highlightP);
+	}
+	
 
 	
 	//step 2: when you click the button, change the text -- do this for all paragraphs
