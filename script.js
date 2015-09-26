@@ -5,13 +5,14 @@ function setup() {
 	noCanvas();
 	
 	//step 1: when you hover over a paragraph, highlight the words in that paragraph
+	//do this by selecting all paragraph elements, putting them into an array
 	paragraphs = selectAll('p'); 
 	
 	for (var i=0; i<paragraphs.length; i++) {	//when you hover over each paragraph, call highlightP
 		paragraphs[i].mouseOver(highlightP);
+		paragraphs[i].mouseOut(removeHighlight);
 	}
 	
-
 	
 	//step 2: when you click the button, change the text -- do this for all paragraphs
 	var bttn1 = select('#bttn1');		//grab button 1, assign it to a variable
@@ -34,31 +35,24 @@ function setup() {
 
 		
 function highlightP() {
-	alert("Paragraph has been highlighted!");
-
+	// Get all the elements inside *this* paragraph with className highlight (outputs an array)
+	var highlights = this.elt.getElementsByClassName('highlight');
+	for (var i=0; i<highlights.length; i++) {
+		//Make a new p5 element to use the p5 syntax
+		var p5elt = new p5.Element(highlights[i]);
+		p5elt.style("background","#d9d9d9");
+	}
 }
 
-// function removeHighlightP1() {	
-// 	var highlight = selectAll('.highlightP1');
-// 	for (var i=0; i<highlight.length; i++) {
-// 		highlight[i].style("background", "none");
-// 	}
-// }
-// 
-// function highlightP2() {
-// 	var highlight = selectAll('.highlightP2');
-// 	// console.log(highlight);
-// 	for (var i=0; i<highlight.length; i++) {
-// 		highlight[i].style("background", "#d9d9d9");
-// 	}
-// }
-// 
-// function removeHighlightP2() {	
-// 	var highlight = selectAll('.highlightP2');
-// 	for (var i=0; i<highlight.length; i++) {
-// 		highlight[i].style("background", "none");
-// 	}
-// }
+function removeHighlight() {
+	// Get all the elements inside *this* paragraph with className highlight (outputs an array)
+	var highlights = this.elt.getElementsByClassName('highlight');
+	for (var i=0; i<highlights.length; i++) {
+		//Make a new p5 element to use the p5 syntax
+		var p5elt = new p5.Element(highlights[i]);
+		p5elt.style("background","none");
+	}
+}
 
 	
 function changeTextP1() {
