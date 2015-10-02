@@ -37,10 +37,11 @@ function setup() {
 function highlightP() {
 	// Get all the elements inside *this* paragraph with className highlight (outputs an array)
 	var highlights = this.elt.getElementsByClassName('highlight');
-	for (var i=0; i<highlights.length; i++) {
+	for (var i=0; i<highlights.length; i++) { //for all the highlights in that paragraph
 		//Make a new p5 element to use the p5 syntax
-		var p5elt = new p5.Element(highlights[i]);
-		p5elt.style("background","#d9d9d9");
+		var p5elt = new p5.Element(highlights[i]); //make a new p5 element
+		console.log(p5elt);
+		p5elt.style("background","#d9d9d9"); //change the background using .style() method
 	}
 }
 
